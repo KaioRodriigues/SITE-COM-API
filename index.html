@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty - Explorador de Personagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                         <img src="image/logo.png" alt="Logo" class="logo-img" height="80" width="80">
+                    </div>
+                    <h1>
+                        <img src="image/logo-name.png" alt="Logo-name" class="logo-name-img" height="70" width="300">
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>Descubra os Personagens</h2>
+                <p>Explore todos os personagens do universo de Rick and Morty. Use a busca para encontrar seu favorito!</p>
+
+                <!-- Barra de Procura -->
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Buscar personagem..."
+                    >
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Carregando personagens...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="error" style="display: none;">
+                <p class="error-title">Erro ao carregar dados</p>
+                <p id="errorMessage"></p>
+            </div>
+
+            <!-- Card de Personagem -->
+            <div id="charactersContainer" class="characters-grid">
+
+            </div>
+
+            <!-- Paginação -->
+            <div id="pagination" class="pagination" style="display: none;">
+                <button id="prevBtn" class="btn btn-primary">← Anterior</button>
+                <span id="pageInfo" class="page-info">Página 1</span>
+                <button id="nextBtn" class="btn btn-primary">Próxima →</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Dados fornecidos pela <a href="https://rickandmortyapi.com" target="_blank">Rick and Morty API</a></p>
+            <p>© 2025 - Kaio Rodrigues Borges</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
